@@ -261,7 +261,7 @@ def lookup_countries_by_ip(ip_list: list[str]) -> dict[str, str]:
 
 # ── output ────────────────────────────────────────────────────────────────────
 
-REPO_RAW = "https://raw.githubusercontent.com/Mokafela/Co-Killer/master/split"
+REPO_RAW = "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split"
 
 
 def write_split(by_country: dict[str, list[str]]) -> None:
