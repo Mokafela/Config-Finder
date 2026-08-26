@@ -1,0 +1,20 @@
+[
+  {
+    "flag": "🌍",
+    "name": "All Configs",
+    "count": 2,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
+  },
+  {
+    "flag": "🇨🇦",
+    "name": "CA",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt"
+  },
+  {
+    "flag": "🇫🇷",
+    "name": "FR",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FR.txt"
+  }
+]
