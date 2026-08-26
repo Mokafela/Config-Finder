@@ -48,6 +48,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add split/ README.md README.fa.md
+          git add split/ subs/subs.json README.md README.fa.md
           git commit -m "Auto-update subscription [skip ci]" || echo "No changes to commit"
           git push

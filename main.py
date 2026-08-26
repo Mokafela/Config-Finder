@@ -1,3 +1,4 @@
+import argparse
 import base64
 import json
 import os
@@ -5,18 +6,32 @@ import re
 import socket
 import subprocess
 import sys
+import time
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 
+# Windows consoles default to cp1252, which cannot print the emoji/arrow
+# characters used in the progress output. Force UTF-8 so local runs work.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 # ── config ────────────────────────────────────────────────────────────────────
-CHANNEL_URL   = os.getenv("CHANNEL_URL", "")  # comma-separated subscription URLs
-TCP_TIMEOUT   = 3    # seconds for the fast TCP pre-filter
-KNIFE_TIMEOUT = 30   # seconds xray-knife is allowed per config (increased from 15)
-MAX_WORKERS   = 10   # parallel xray-knife workers (reduced since timeout is longer)
-IP_API_BATCH  = 100  # ip-api.com free batch limit
-OUTPUT_DIR    = "split"
+CHANNEL_URL    = os.getenv("CHANNEL_URL", "")  # comma-separated subscription URLs
+TCP_TIMEOUT    = 3    # seconds for the fast TCP pre-filter
+KNIFE_TIMEOUT  = 30   # seconds xray-knife is allowed per config (increased from 15)
+MAX_WORKERS    = 10   # parallel xray-knife workers (reduced since timeout is longer)
+IP_API_BATCH   = 100  # ip-api.com free batch limit
+IP_API_RETRIES = 2    # retries per ip-api.com batch request
+IP_API_RETRY_DELAY = 1.0  # seconds before the first retry (doubles on each retry)
+OUTPUT_DIR     = "split"
+
+# Probe results are cached between runs (CI runs every 15 min) so consecutive
+# runs reuse verified exit IPs instead of re-probing every config.
+PROBE_CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".probe_cache.json")
+PROBE_CACHE_TTL  = 6 * 3600  # reuse cached exit IPs younger than this (seconds)
 
 # xray-knife binary: prefer the one next to this script, then PATH
 _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -70,6 +85,19 @@ def parse_host_port(config: str):
     except Exception:
         pass
     return None
+
+
+def config_key(config: str) -> str:
+    """Normalized identity for dedup: (scheme, host, port).
+
+    Two configs pointing at the same server are duplicates even if their
+    names/remarks differ. Falls back to the raw string when unparseable.
+    """
+    parsed = parse_host_port(config)
+    if not parsed or not parsed[0] or not parsed[1]:
+        return config
+    scheme = config.split("://", 1)[0].lower()
+    return f"{scheme}|{parsed[0]}|{parsed[1]}"
 
 
 def rename_config(config: str, new_name: str) -> str:
@@ -135,7 +163,8 @@ def get_exit_ip(config: str) -> str | None:
                     "--rip",
                 ],
                 capture_output=True,
-                text=True,
+                encoding="utf-8",
+                errors="replace",
                 timeout=KNIFE_TIMEOUT + 5,
             )
             combined = proc.stdout + proc.stderr
@@ -144,40 +173,42 @@ def get_exit_ip(config: str) -> str | None:
                 return m.group(1)
         except Exception:
             continue
-    
+
     # Debug first failure
     if os.getenv("DEBUG"):
         try:
             proc = subprocess.run(
                 [KNIFE_BIN, "http", "-c", config, "-u", "https://api.ipify.org",
                  "-d", str(KNIFE_TIMEOUT * 1000), "-b", "--rip"],
-                capture_output=True, text=True, timeout=KNIFE_TIMEOUT + 5,
+                capture_output=True, encoding="utf-8", errors="replace", timeout=KNIFE_TIMEOUT + 5,
             )
             print(f"[DEBUG] xray-knife failed (exit={proc.returncode}):")
             print(f"  stdout: {proc.stdout[:300]}")
             print(f"  stderr: {proc.stderr[:300]}")
         except Exception as e:
             print(f"[DEBUG] Exception: {e}")
-    
+
     return None
 
 
-def get_server_ip(config: str) -> str | None:
-    """Fallback: resolve the server's host to an IP."""
-    parsed = parse_host_port(config)
-    if not parsed or not parsed[0]:
-        return None
-    host = parsed[0]
+# ── probe result cache ────────────────────────────────────────────────────────
+
+def load_probe_cache() -> dict[str, dict]:
+    """Return {config: {"ip": ..., "ts": ...}} from disk; {} on any error."""
     try:
-        # If already an IP, return it
-        socket.inet_aton(host)
-        return host
-    except socket.error:
-        # Resolve hostname
-        try:
-            return socket.gethostbyname(host)
-        except Exception:
-            return None
+        with open(PROBE_CACHE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def save_probe_cache(cache: dict[str, dict]) -> None:
+    try:
+        with open(PROBE_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+    except Exception as e:
+        print(f"  [WARN] Could not save probe cache: {e}")
 
 
 # ── step 3: country lookup via ip-api.com ────────────────────────────────────
@@ -211,13 +242,20 @@ def lookup_countries_by_ip(ip_list: list[str]) -> dict[str, str]:
     unique_ips = list(set(ip_list))
     for i in range(0, len(unique_ips), IP_API_BATCH):
         batch = [{"query": ip} for ip in unique_ips[i : i + IP_API_BATCH]]
-        try:
-            r = requests.post("http://ip-api.com/batch", json=batch, timeout=15)
-            for item in r.json():
-                if item.get("status") == "success":
-                    result[item["query"]] = item.get("countryCode", "XX")
-        except Exception as e:
-            print(f"  [WARN] ip-api.com error: {e}")
+        for attempt in range(IP_API_RETRIES + 1):
+            try:
+                r = requests.post("http://ip-api.com/batch", json=batch, timeout=15)
+                r.raise_for_status()
+                for item in r.json():
+                    if item.get("status") == "success":
+                        result[item["query"]] = item.get("countryCode", UNKNOWN_CC)
+                break
+            except Exception as e:
+                if attempt < IP_API_RETRIES:
+                    print(f"  [WARN] ip-api.com error ({attempt + 1}/{IP_API_RETRIES}): {e} — retrying…")
+                    time.sleep(IP_API_RETRY_DELAY * (attempt + 1))
+                else:
+                    print(f"  [WARN] ip-api.com error: {e}")
     return result
 
 
@@ -239,7 +277,7 @@ def write_split(by_country: dict[str, list[str]]) -> None:
         for cfg in cfgs:
             renamed.append(rename_config(cfg, f"{flag} Mokafela-ConfigKiller #{counter}"))
             counter += 1
-        
+
         b64 = base64.b64encode("\n".join(renamed).encode()).decode()
         path = os.path.join(OUTPUT_DIR, f"sub-{cc}.txt")
         with open(path, "w", encoding="utf-8") as f:
@@ -254,12 +292,35 @@ def write_split(by_country: dict[str, list[str]]) -> None:
         for cfg in cfgs:
             all_cfgs.append(rename_config(cfg, f"{flag} Mokafela-ConfigKiller #{counter}"))
             counter += 1
-    
+
     b64_all = base64.b64encode("\n".join(all_cfgs).encode()).decode()
     all_path = os.path.join(OUTPUT_DIR, "sub-ALL.txt")
     with open(all_path, "w", encoding="utf-8") as f:
         f.write(b64_all)
     print(f"  Wrote {len(all_cfgs):>4} configs → {all_path}")
+
+
+def write_subs_json(by_country: dict[str, list[str]]) -> None:
+    """Write subs/subs.json, the data source for index.html."""
+    os.makedirs("subs", exist_ok=True)
+    total = sum(len(cfgs) for cfgs in by_country.values())
+    subs: list[dict] = [{
+        "flag": "🌍",
+        "name": "All Configs",
+        "count": total,
+        "url": f"{REPO_RAW}/sub-ALL.txt",
+    }]
+    for cc, cfgs in sorted(by_country.items(), key=lambda x: -len(x[1])):
+        subs.append({
+            "flag": country_to_flag(cc),
+            "name": cc_display(cc),
+            "count": len(cfgs),
+            "url": f"{REPO_RAW}/sub-{cc}.txt",
+        })
+    path = os.path.join("subs", "subs.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(subs, f, ensure_ascii=False, indent=2)
+    print(f"  Wrote {len(subs)} entries → {path}")
 
 
 def _build_table(by_country: dict[str, list[str]], total: int) -> str:
@@ -320,6 +381,13 @@ def update_readme(by_country: dict[str, list[str]]) -> None:
 # ── main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Config Killer pipeline")
+    parser.add_argument("--limit", type=int, default=0,
+                        help="Only process the first N unique configs (0 = all)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Fetch and test only; do not write split/, subs/ or README files")
+    args = parser.parse_args()
+
     if not CHANNEL_URL:
         print("CHANNEL_URL is not set. Export it as an env variable.")
         sys.exit(1)
@@ -333,7 +401,14 @@ def main() -> None:
         all_configs.extend(cfgs)
 
     seen: set[str] = set()
-    unique = [c for c in all_configs if not (c in seen or seen.add(c))]  # type: ignore[func-returns-value]
+    unique: list[str] = []
+    for c in all_configs:
+        key = config_key(c)
+        if key not in seen:
+            seen.add(key)
+            unique.append(c)
+    if args.limit > 0:
+        unique = unique[: args.limit]
     print(f"\nTotal unique configs: {len(unique)}")
 
     # ── 2. TCP alive (fast pre-filter) ────────────────────────────────────────
@@ -355,45 +430,52 @@ def main() -> None:
         print("No alive configs. Exiting.")
         return
 
-    # ── 3. get real exit IP via xray-knife (with server IP fallback) ─────────
+    # ── 3. get real exit IP via xray-knife ────────────────────────────────────
     print(f"\n[2/3] Exit-IP probe  ({MAX_WORKERS} workers, {KNIFE_TIMEOUT}s each)…")
-    ip_map: dict[str, str | None] = {}  # config → IP (exit or server)
-    total = len(alive)
-    
+    now = time.time()
+    cache = load_probe_cache()
+    cache = {c: v for c, v in cache.items()
+             if v.get("ip") and now - v.get("ts", 0) < PROBE_CACHE_TTL}
+
+    ip_map: dict[str, str] = {}  # config → verified exit IP
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
-        futures = {ex.submit(get_exit_ip, c): c for c in alive}
-        done = 0
-        exit_found = 0
+        futures = {}
+        for c in alive:
+            cached_ip = cache.get(c, {}).get("ip")
+            if cached_ip:
+                ip_map[c] = cached_ip
+            else:
+                futures[ex.submit(get_exit_ip, c)] = c
+
+        done = len(ip_map)
+        total = len(alive)
         for fut in as_completed(futures):
             done += 1
             cfg = futures[fut]
             ip = fut.result()
-            ip_map[cfg] = ip
             if ip:
-                exit_found += 1
+                ip_map[cfg] = ip
+                cache[cfg] = {"ip": ip, "ts": now}
             if done % 50 == 0 or done == total:
-                print(f"  {done}/{total} probed — {exit_found} exit IPs obtained")
+                print(f"  {done}/{total} probed — {len(ip_map)} exit IPs obtained")
 
-    print(f"  → {exit_found} exit IPs via xray-knife")
-    
-    # Fallback: for configs where xray-knife failed, use server IP
-    failed = [c for c, ip in ip_map.items() if not ip]
-    if failed:
-        print(f"  → Falling back to server IP for {len(failed)} configs...")
-        for cfg in failed:
-            ip_map[cfg] = get_server_ip(cfg)
-        server_found = sum(1 for ip in ip_map.values() if ip)
-        print(f"  → {server_found - exit_found} server IPs resolved")
+    save_probe_cache(cache)
+    print(f"  → {len(ip_map)} exit IPs via xray-knife")
+
+    # Only configs with a verified exit IP are published — no server-IP
+    # fallback, so the country split reflects the real exit country.
+    usable = [c for c in alive if c in ip_map]
+    dropped = len(alive) - len(usable)
+    if dropped:
+        print(f"  → Dropping {dropped} configs without a verified exit IP")
 
     # ── 4. country lookup for all IPs ────────────────────────────────────────
     print(f"\n[3/3] Country lookup via ip-api.com…")
-    all_ips = [ip for ip in ip_map.values() if ip]
-    ip_to_cc = lookup_countries_by_ip(all_ips)
+    ip_to_cc = lookup_countries_by_ip(list(ip_map.values()))
 
     by_country: dict[str, list[str]] = {}
-    for cfg in alive:
-        ip = ip_map.get(cfg)
-        cc = ip_to_cc.get(ip, UNKNOWN_CC) if ip else UNKNOWN_CC
+    for cfg in usable:
+        cc = ip_to_cc.get(ip_map[cfg], UNKNOWN_CC)
         by_country.setdefault(cc, []).append(cfg)
 
     print("Country breakdown:")
@@ -401,8 +483,13 @@ def main() -> None:
         print(f"  {country_to_flag(cc)} {cc}: {len(cfgs)}")
 
     # ── 5. write split/ and update README ────────────────────────────────────
+    if args.dry_run:
+        print("\n[dry-run] Skipping writes to split/, subs/ and README files")
+        return
+
     print(f"\nWriting to ./{OUTPUT_DIR}/")
     write_split(by_country)
+    write_subs_json(by_country)
     print("\nUpdating README…")
     update_readme(by_country)
     print("\nDone.")

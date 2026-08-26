@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+
+# IDE
+.idea/
+
+# Local tooling (xray-knife is downloaded in CI; binaries stay local)
+knife_dir/
+knife_win/
+knife_tmp/
+knife*.zip
+
+# Local data dumps / probe cache
+tmp.txt
+sub.txt
+.probe_cache.json
