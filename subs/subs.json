@@ -32,7 +32,7 @@
   {
     "flag": "🇫🇷",
     "name": "FR",
-    "count": 10,
+    "count": 11,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FR.txt"
   },
   {
@@ -78,16 +78,16 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt"
   },
   {
-    "flag": "🇸🇬",
-    "name": "SG",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt"
-  },
-  {
     "flag": "🇱🇹",
     "name": "LT",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LT.txt"
+  },
+  {
+    "flag": "🇮🇳",
+    "name": "IN",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IN.txt"
   },
   {
     "flag": "🇪🇸",
@@ -108,10 +108,10 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CH.txt"
   },
   {
-    "flag": "🇮🇳",
-    "name": "IN",
+    "flag": "🇹🇷",
+    "name": "TR",
     "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IN.txt"
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TR.txt"
   },
   {
     "flag": "🇸🇪",
@@ -132,16 +132,16 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-BZ.txt"
   },
   {
-    "flag": "🇹🇷",
-    "name": "TR",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TR.txt"
-  },
-  {
     "flag": "🇰🇿",
     "name": "KZ",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-KZ.txt"
+  },
+  {
+    "flag": "🇮🇹",
+    "name": "IT",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
   },
   {
     "flag": "🇫🇮",
@@ -150,9 +150,9 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FI.txt"
   },
   {
-    "flag": "🇮🇹",
-    "name": "IT",
+    "flag": "🇸🇬",
+    "name": "SG",
     "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt"
   }
 ]
