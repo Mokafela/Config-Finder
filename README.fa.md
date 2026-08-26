@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/رایگان-بدون_نیاز_به_ثبت_نام-brightgreen?style=for-the-badge" />
 <img src="https://img.shields.io/badge/پروتکل-VMess_%7C_VLESS_%7C_Trojan_%7C_SS-orange?style=for-the-badge" />
 
-<h1>⚡ کانفیگ کیلر</h1>
+<h1>⚡ کانفیگ فایندر</h1>
 <p>کانفیگ‌های پروکسی رایگان با بروزرسانی خودکار — دسته‌بندی شده بر اساس کشور خروجی واقعی</p>
 
 <p>

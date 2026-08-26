@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/Free-No%20Login%20Required-brightgreen?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Protocols-VMess%20%7C%20VLESS%20%7C%20Trojan%20%7C%20SS-orange?style=for-the-badge" />
 
-<h1>⚡ Config Killer</h1>
+<h1>⚡ Config Finder</h1>
 <p>Free, auto-updated proxy configs — sorted by real exit country.</p>
 
 <p>

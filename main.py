@@ -275,7 +275,7 @@ def write_split(by_country: dict[str, list[str]]) -> None:
         renamed = []
         flag = country_to_flag(cc)
         for cfg in cfgs:
-            renamed.append(rename_config(cfg, f"{flag} Mokafela-ConfigKiller #{counter}"))
+            renamed.append(rename_config(cfg, f"{flag} Mokafela-Config-Finder #{counter}"))
             counter += 1
 
         b64 = base64.b64encode("\n".join(renamed).encode()).decode()
@@ -290,7 +290,7 @@ def write_split(by_country: dict[str, list[str]]) -> None:
     for cc, cfgs in by_country.items():
         flag = country_to_flag(cc)
         for cfg in cfgs:
-            all_cfgs.append(rename_config(cfg, f"{flag} Mokafela-ConfigKiller #{counter}"))
+            all_cfgs.append(rename_config(cfg, f"{flag} Mokafela-Config-Finder #{counter}"))
             counter += 1
 
     b64_all = base64.b64encode("\n".join(all_cfgs).encode()).decode()
@@ -381,7 +381,7 @@ def update_readme(by_country: dict[str, list[str]]) -> None:
 # ── main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Config Killer pipeline")
+    parser = argparse.ArgumentParser(description="Config Finder pipeline")
     parser.add_argument("--limit", type=int, default=0,
                         help="Only process the first N unique configs (0 = all)")
     parser.add_argument("--dry-run", action="store_true",
