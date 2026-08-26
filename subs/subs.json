@@ -2,31 +2,31 @@
   {
     "flag": "🌍",
     "name": "All Configs",
-    "count": 211,
+    "count": 207,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
   },
   {
     "flag": "🇨🇦",
     "name": "CA",
-    "count": 59,
+    "count": 58,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt"
   },
   {
     "flag": "🇳🇱",
     "name": "NL",
-    "count": 41,
+    "count": 38,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt"
   },
   {
     "flag": "🇺🇸",
     "name": "US",
-    "count": 36,
+    "count": 37,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt"
   },
   {
     "flag": "🇩🇪",
     "name": "DE",
-    "count": 22,
+    "count": 21,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt"
   },
   {
@@ -38,7 +38,7 @@
   {
     "flag": "🇵🇱",
     "name": "PL",
-    "count": 9,
+    "count": 10,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-PL.txt"
   },
   {
@@ -72,16 +72,16 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LV.txt"
   },
   {
-    "flag": "🇸🇬",
-    "name": "SG",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt"
-  },
-  {
     "flag": "🇯🇵",
     "name": "JP",
     "count": 2,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt"
+  },
+  {
+    "flag": "🇸🇬",
+    "name": "SG",
+    "count": 2,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt"
   },
   {
     "flag": "🇱🇹",
@@ -136,12 +136,6 @@
     "name": "KZ",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-KZ.txt"
-  },
-  {
-    "flag": "🇹🇷",
-    "name": "TR",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TR.txt"
   },
   {
     "flag": "🇫🇮",
