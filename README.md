@@ -19,36 +19,19 @@
 ## 🔗 Subscription Links
 
 <!-- SUBS_START -->
-> **142 configs** across **18 countries** — updated every 15 minutes.
+> **1 configs** across **1 countries** — updated every 15 minutes.
 
 ### � All Configs
 
 | | | Link |
 | :---: | :---: | :--- |
-| 🌍 | **142** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt` |
+| 🌍 | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt` |
 
 ### 🗺️ By Country
 
 | 🏳️ | Country | Configs | Link |
 | :---: | :--- | :---: | :--- |
-| <img src="https://flagcdn.com/20x15/us.png" alt="US"> | US | **31** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt` |
-| <img src="https://flagcdn.com/20x15/ca.png" alt="CA"> | CA | **27** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt` |
-| <img src="https://flagcdn.com/20x15/de.png" alt="DE"> | DE | **24** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt` |
-| <img src="https://flagcdn.com/20x15/nl.png" alt="NL"> | NL | **22** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt` |
-| <img src="https://flagcdn.com/20x15/fr.png" alt="FR"> | FR | **11** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FR.txt` |
-| <img src="https://flagcdn.com/20x15/pl.png" alt="PL"> | PL | **9** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-PL.txt` |
-| <img src="https://flagcdn.com/20x15/ru.png" alt="RU"> | RU | **3** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-RU.txt` |
-| <img src="https://flagcdn.com/20x15/jp.png" alt="JP"> | JP | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt` |
-| <img src="https://flagcdn.com/20x15/lv.png" alt="LV"> | LV | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LV.txt` |
-| <img src="https://flagcdn.com/20x15/sg.png" alt="SG"> | SG | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt` |
-| <img src="https://flagcdn.com/20x15/gb.png" alt="GB"> | GB | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-GB.txt` |
-| <img src="https://flagcdn.com/20x15/lt.png" alt="LT"> | LT | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LT.txt` |
-| <img src="https://flagcdn.com/20x15/ee.png" alt="EE"> | EE | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-EE.txt` |
-| <img src="https://flagcdn.com/20x15/se.png" alt="SE"> | SE | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SE.txt` |
-| <img src="https://flagcdn.com/20x15/kr.png" alt="KR"> | KR | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-KR.txt` |
-| <img src="https://flagcdn.com/20x15/at.png" alt="AT"> | AT | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-AT.txt` |
-| <img src="https://flagcdn.com/20x15/it.png" alt="IT"> | IT | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt` |
-| <img src="https://flagcdn.com/20x15/hk.png" alt="HK"> | HK | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-HK.txt` |
+| <img src="https://flagcdn.com/20x15/ca.png" alt="CA"> | CA | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt` |
 <!-- SUBS_END -->
 
 ---
