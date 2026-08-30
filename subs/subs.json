@@ -2,133 +2,19 @@
   {
     "flag": "🌍",
     "name": "All Configs",
-    "count": 175,
+    "count": 3,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
   },
   {
     "flag": "🇳🇱",
     "name": "NL",
-    "count": 46,
+    "count": 2,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt"
-  },
-  {
-    "flag": "🇨🇦",
-    "name": "CA",
-    "count": 38,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt"
-  },
-  {
-    "flag": "🇺🇸",
-    "name": "US",
-    "count": 29,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt"
-  },
-  {
-    "flag": "🇩🇪",
-    "name": "DE",
-    "count": 14,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt"
-  },
-  {
-    "flag": "🇫🇷",
-    "name": "FR",
-    "count": 11,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FR.txt"
-  },
-  {
-    "flag": "🇵🇱",
-    "name": "PL",
-    "count": 9,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-PL.txt"
-  },
-  {
-    "flag": "🇱🇻",
-    "name": "LV",
-    "count": 6,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LV.txt"
-  },
-  {
-    "flag": "🇷🇺",
-    "name": "RU",
-    "count": 4,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-RU.txt"
-  },
-  {
-    "flag": "🇱🇹",
-    "name": "LT",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LT.txt"
-  },
-  {
-    "flag": "🇸🇬",
-    "name": "SG",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt"
-  },
-  {
-    "flag": "🇸🇨",
-    "name": "SC",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SC.txt"
-  },
-  {
-    "flag": "🇭🇰",
-    "name": "HK",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-HK.txt"
-  },
-  {
-    "flag": "🇬🇧",
-    "name": "GB",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-GB.txt"
   },
   {
     "flag": "🇮🇪",
     "name": "IE",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IE.txt"
-  },
-  {
-    "flag": "🇪🇪",
-    "name": "EE",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-EE.txt"
-  },
-  {
-    "flag": "🇧🇷",
-    "name": "BR",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-BR.txt"
-  },
-  {
-    "flag": "🇺🇦",
-    "name": "UA",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-UA.txt"
-  },
-  {
-    "flag": "🇮🇷",
-    "name": "IR",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IR.txt"
-  },
-  {
-    "flag": "🇮🇹",
-    "name": "IT",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
-  },
-  {
-    "flag": "🇯🇵",
-    "name": "JP",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt"
-  },
-  {
-    "flag": "🇹🇷",
-    "name": "TR",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TR.txt"
   }
 ]
