@@ -2,31 +2,31 @@
   {
     "flag": "🌍",
     "name": "All Configs",
-    "count": 208,
+    "count": 207,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
   },
   {
     "flag": "🇳🇱",
     "name": "NL",
-    "count": 47,
+    "count": 46,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt"
   },
   {
     "flag": "🇺🇸",
     "name": "US",
-    "count": 39,
+    "count": 42,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt"
   },
   {
     "flag": "🇨🇦",
     "name": "CA",
-    "count": 32,
+    "count": 31,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt"
   },
   {
     "flag": "🇩🇪",
     "name": "DE",
-    "count": 25,
+    "count": 23,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt"
   },
   {
@@ -102,6 +102,12 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SC.txt"
   },
   {
+    "flag": "🇹🇼",
+    "name": "TW",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TW.txt"
+  },
+  {
     "flag": "🇱🇹",
     "name": "LT",
     "count": 1,
@@ -114,18 +120,6 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IE.txt"
   },
   {
-    "flag": "🇹🇼",
-    "name": "TW",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TW.txt"
-  },
-  {
-    "flag": "🇮🇩",
-    "name": "ID",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt"
-  },
-  {
     "flag": "🇫🇮",
     "name": "FI",
     "count": 1,
@@ -136,6 +130,12 @@
     "name": "SE",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SE.txt"
+  },
+  {
+    "flag": "🇮🇩",
+    "name": "ID",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt"
   },
   {
     "flag": "🇹🇷",
