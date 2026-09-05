@@ -2,25 +2,145 @@
   {
     "flag": "🌍",
     "name": "All Configs",
-    "count": 3,
+    "count": 201,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
-  },
-  {
-    "flag": "🇨🇦",
-    "name": "CA",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt"
   },
   {
     "flag": "🇳🇱",
     "name": "NL",
-    "count": 1,
+    "count": 47,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt"
+  },
+  {
+    "flag": "🇺🇸",
+    "name": "US",
+    "count": 38,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt"
+  },
+  {
+    "flag": "🇨🇦",
+    "name": "CA",
+    "count": 32,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt"
+  },
+  {
+    "flag": "🇩🇪",
+    "name": "DE",
+    "count": 22,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt"
+  },
+  {
+    "flag": "🇵🇱",
+    "name": "PL",
+    "count": 12,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-PL.txt"
   },
   {
     "flag": "🇫🇷",
     "name": "FR",
-    "count": 1,
+    "count": 11,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FR.txt"
+  },
+  {
+    "flag": "🇬🇧",
+    "name": "GB",
+    "count": 6,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-GB.txt"
+  },
+  {
+    "flag": "🇸🇬",
+    "name": "SG",
+    "count": 5,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt"
+  },
+  {
+    "flag": "🇷🇺",
+    "name": "RU",
+    "count": 4,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-RU.txt"
+  },
+  {
+    "flag": "🇱🇻",
+    "name": "LV",
+    "count": 4,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LV.txt"
+  },
+  {
+    "flag": "🇰🇷",
+    "name": "KR",
+    "count": 3,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-KR.txt"
+  },
+  {
+    "flag": "🇺🇦",
+    "name": "UA",
+    "count": 3,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-UA.txt"
+  },
+  {
+    "flag": "🇮🇷",
+    "name": "IR",
+    "count": 2,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IR.txt"
+  },
+  {
+    "flag": "🇺🇿",
+    "name": "UZ",
+    "count": 2,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-UZ.txt"
+  },
+  {
+    "flag": "🇸🇨",
+    "name": "SC",
+    "count": 2,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SC.txt"
+  },
+  {
+    "flag": "🇱🇹",
+    "name": "LT",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LT.txt"
+  },
+  {
+    "flag": "🇹🇼",
+    "name": "TW",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TW.txt"
+  },
+  {
+    "flag": "🇮🇩",
+    "name": "ID",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt"
+  },
+  {
+    "flag": "🇮🇹",
+    "name": "IT",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
+  },
+  {
+    "flag": "🇫🇮",
+    "name": "FI",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FI.txt"
+  },
+  {
+    "flag": "🇸🇪",
+    "name": "SE",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SE.txt"
+  },
+  {
+    "flag": "🇹🇷",
+    "name": "TR",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TR.txt"
+  },
+  {
+    "flag": "🇭🇰",
+    "name": "HK",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-HK.txt"
   }
 ]
