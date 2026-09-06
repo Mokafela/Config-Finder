@@ -40,15 +40,15 @@
 | <img src="https://flagcdn.com/20x15/sg.png" alt="SG"> | SG | **5** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt` |
 | <img src="https://flagcdn.com/20x15/gb.png" alt="GB"> | GB | **5** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-GB.txt` |
 | <img src="https://flagcdn.com/20x15/lv.png" alt="LV"> | LV | **4** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LV.txt` |
-| <img src="https://flagcdn.com/20x15/ru.png" alt="RU"> | RU | **3** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-RU.txt` |
 | <img src="https://flagcdn.com/20x15/kr.png" alt="KR"> | KR | **3** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-KR.txt` |
+| <img src="https://flagcdn.com/20x15/ru.png" alt="RU"> | RU | **3** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-RU.txt` |
 | <img src="https://flagcdn.com/20x15/ua.png" alt="UA"> | UA | **3** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-UA.txt` |
 | <img src="https://flagcdn.com/20x15/it.png" alt="IT"> | IT | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt` |
 | <img src="https://flagcdn.com/20x15/ir.png" alt="IR"> | IR | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IR.txt` |
 | <img src="https://flagcdn.com/20x15/uz.png" alt="UZ"> | UZ | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-UZ.txt` |
 | <img src="https://flagcdn.com/20x15/sc.png" alt="SC"> | SC | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SC.txt` |
-| <img src="https://flagcdn.com/20x15/lt.png" alt="LT"> | LT | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LT.txt` |
 | <img src="https://flagcdn.com/20x15/tw.png" alt="TW"> | TW | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-TW.txt` |
+| <img src="https://flagcdn.com/20x15/lt.png" alt="LT"> | LT | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-LT.txt` |
 | <img src="https://flagcdn.com/20x15/id.png" alt="ID"> | ID | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt` |
 | <img src="https://flagcdn.com/20x15/fi.png" alt="FI"> | FI | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FI.txt` |
 | <img src="https://flagcdn.com/20x15/se.png" alt="SE"> | SE | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SE.txt` |
