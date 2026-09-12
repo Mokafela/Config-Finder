@@ -2,7 +2,7 @@
   {
     "flag": "🌍",
     "name": "All Configs",
-    "count": 169,
+    "count": 172,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
   },
   {
@@ -14,7 +14,7 @@
   {
     "flag": "🇺🇸",
     "name": "US",
-    "count": 34,
+    "count": 37,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt"
   },
   {
@@ -26,7 +26,7 @@
   {
     "flag": "🇩🇪",
     "name": "DE",
-    "count": 16,
+    "count": 17,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt"
   },
   {
@@ -58,12 +58,6 @@
     "name": "UA",
     "count": 3,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-UA.txt"
-  },
-  {
-    "flag": "🇮🇹",
-    "name": "IT",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
   },
   {
     "flag": "🇷🇺",
@@ -106,6 +100,12 @@
     "name": "ID",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt"
+  },
+  {
+    "flag": "🇮🇹",
+    "name": "IT",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
   },
   {
     "flag": "🇫🇮",
