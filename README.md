@@ -19,7 +19,7 @@
 ## 🔗 Subscription Links
 
 <!-- SUBS_START -->
-> **2 configs** across **1 countries** — updated every 15 minutes.
+> **2 configs** across **2 countries** — updated every 15 minutes.
 
 ### � All Configs
 
@@ -31,7 +31,8 @@
 
 | 🏳️ | Country | Configs | Link |
 | :---: | :--- | :---: | :--- |
-| <img src="https://flagcdn.com/20x15/nl.png" alt="NL"> | NL | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt` |
+| <img src="https://flagcdn.com/20x15/ca.png" alt="CA"> | CA | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt` |
+| <img src="https://flagcdn.com/20x15/nl.png" alt="NL"> | NL | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt` |
 <!-- SUBS_END -->
 
 ---
