@@ -2,13 +2,13 @@
   {
     "flag": "🌍",
     "name": "All Configs",
-    "count": 140,
+    "count": 142,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt"
   },
   {
     "flag": "🇳🇱",
     "name": "NL",
-    "count": 37,
+    "count": 38,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt"
   },
   {
@@ -20,7 +20,7 @@
   {
     "flag": "🇺🇸",
     "name": "US",
-    "count": 30,
+    "count": 29,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt"
   },
   {
@@ -54,16 +54,16 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-PL.txt"
   },
   {
+    "flag": "🇰🇷",
+    "name": "KR",
+    "count": 3,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-KR.txt"
+  },
+  {
     "flag": "🇷🇺",
     "name": "RU",
     "count": 3,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-RU.txt"
-  },
-  {
-    "flag": "🇮🇹",
-    "name": "IT",
-    "count": 2,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
   },
   {
     "flag": "🇮🇷",
@@ -78,22 +78,28 @@
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SC.txt"
   },
   {
+    "flag": "🇮🇩",
+    "name": "ID",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt"
+  },
+  {
     "flag": "🇯🇵",
     "name": "JP",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt"
   },
   {
+    "flag": "🇮🇹",
+    "name": "IT",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt"
+  },
+  {
     "flag": "🇫🇮",
     "name": "FI",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FI.txt"
-  },
-  {
-    "flag": "🇮🇩",
-    "name": "ID",
-    "count": 1,
-    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ID.txt"
   },
   {
     "flag": "🇭🇰",
