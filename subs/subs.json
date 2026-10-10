@@ -32,7 +32,7 @@
   {
     "flag": "🇫🇷",
     "name": "FR",
-    "count": 6,
+    "count": 5,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FR.txt"
   },
   {
@@ -100,5 +100,11 @@
     "name": "JP",
     "count": 1,
     "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt"
+  },
+  {
+    "flag": "🇭🇰",
+    "name": "HK",
+    "count": 1,
+    "url": "https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-HK.txt"
   }
 ]
