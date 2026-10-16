@@ -19,19 +19,19 @@
 ## 🔗 Subscription Links
 
 <!-- SUBS_START -->
-> **123 configs** across **16 countries** — updated every 15 minutes.
+> **125 configs** across **16 countries** — updated every 15 minutes.
 
 ### � All Configs
 
 | | | Link |
 | :---: | :---: | :--- |
-| 🌍 | **123** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt` |
+| 🌍 | **125** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt` |
 
 ### 🗺️ By Country
 
 | 🏳️ | Country | Configs | Link |
 | :---: | :--- | :---: | :--- |
-| <img src="https://flagcdn.com/20x15/nl.png" alt="NL"> | NL | **33** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt` |
+| <img src="https://flagcdn.com/20x15/nl.png" alt="NL"> | NL | **35** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-NL.txt` |
 | <img src="https://flagcdn.com/20x15/ca.png" alt="CA"> | CA | **30** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-CA.txt` |
 | <img src="https://flagcdn.com/20x15/us.png" alt="US"> | US | **26** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-US.txt` |
 | <img src="https://flagcdn.com/20x15/de.png" alt="DE"> | DE | **8** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-DE.txt` |
