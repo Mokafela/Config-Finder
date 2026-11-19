@@ -19,13 +19,13 @@
 ## 🔗 لینک‌های اشتراک
 
 <!-- SUBS_START_FA -->
-> **112 configs** across **13 countries** — updated every 15 minutes.
+> **113 configs** across **14 countries** — updated every 15 minutes.
 
 ### � All Configs
 
 | | | Link |
 | :---: | :---: | :--- |
-| 🌍 | **112** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt` |
+| 🌍 | **113** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-ALL.txt` |
 
 ### 🗺️ By Country
 
@@ -41,9 +41,10 @@
 | <img src="https://flagcdn.com/20x15/sc.png" alt="SC"> | SC | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SC.txt` |
 | <img src="https://flagcdn.com/20x15/gb.png" alt="GB"> | GB | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-GB.txt` |
 | <img src="https://flagcdn.com/20x15/sg.png" alt="SG"> | SG | **2** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-SG.txt` |
-| <img src="https://flagcdn.com/20x15/jp.png" alt="JP"> | JP | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt` |
 | <img src="https://flagcdn.com/20x15/it.png" alt="IT"> | IT | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-IT.txt` |
+| <img src="https://flagcdn.com/20x15/jp.png" alt="JP"> | JP | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-JP.txt` |
 | <img src="https://flagcdn.com/20x15/fi.png" alt="FI"> | FI | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-FI.txt` |
+| <img src="https://flagcdn.com/20x15/hk.png" alt="HK"> | HK | **1** | `https://raw.githubusercontent.com/Mokafela/Config-Finder/master/split/sub-HK.txt` |
 <!-- SUBS_END_FA -->
 
 ---
